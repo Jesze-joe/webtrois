@@ -1,0 +1,414 @@
+ body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #fffb;
+            color: #000;
+            overflow-x: hidden;
+            line-height: 1.6;
+            
+        }
+@media only screen and (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+    font-size: 10px;
+  }
+
+  .grid {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .web3 {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .text {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .grid-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .type-sample .text-display {
+    font-size: 40px;
+  }
+
+  video {
+    position: static;
+    width: 100%;
+  }
+
+  #error-message {
+    top: 20px;
+    left: 20px;
+    font-size: 12px;
+  }
+
+  .color-box {
+    height: 150px;
+  }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  .container {
+    padding: 10px;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    font-size: 11px;
+    justify-content: center;
+  }
+
+  .grid {
+    flex-direction: column;
+  }
+
+  .web3 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .text {
+    font-size: 1.8rem;
+  }
+
+  .color-box {
+    height: 200px;
+  }
+}
+@media only screen and (max-width: 600px) {
+
+  .design-process .steps {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .step {
+    padding: 15px;
+    font-size: 13px;
+  }
+
+
+  .colour-palette .colors {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .color-box {
+    height: 120px;
+    font-size: 12px;
+  }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  
+  .design-process .steps {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .step {
+    font-size: 14px;
+  }
+
+  .colour-palette .colors {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .color-box {
+    width: 100%;
+    height: 180px;
+  }
+}
+
+@media screen and (orientation: landscape) {
+  .design-process .steps {
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .step {
+    font-size: 14px;
+  }
+
+  .colour-palette .colors {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .color-box {
+    height: 200px;
+  }
+}
+
+@media screen and (orientation: landscape) {
+  .web3 {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .text {
+    font-size: 2.2rem;
+  }
+
+  .grid-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .color-box {
+    height: 250px;
+  }
+}
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            font-size: 12px;
+            margin-bottom: 20px;
+            opacity: 0;
+            transform: translateY(-20px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        nav.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        nav a {
+            color: #000;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        section {
+            margin-bottom: 40px;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+
+        section.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 14px;
+            color: #666;
+        }
+
+        .design-process .steps, .colour-palette .colors {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+        }
+
+        .step, .color-box {
+            flex: 1;
+            text-align: center;
+            padding: 20px;
+            background: #f5f5f5;
+            border: 1px solid #ddd;
+        }
+        .step{
+            text-align: left;
+        }
+        .step.active {
+            background: #ff3562;
+            color: #fff;
+        }
+
+        .timeline {
+            position: relative;
+            height: 100px;
+        }
+
+        .timeline-bar {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: #ddd;
+        }
+
+        .month {
+            position: absolute;
+            top: -20px;
+        }
+
+        .month:nth-child(1) { left: 0; }
+        .month:nth-child(2) { left: 50%; }
+
+        .task {
+            position: absolute;
+            width: 100px;
+            height: 20px;
+            padding: 15px;
+            background: #000;
+            color: #fff;
+            text-align: center;
+            top: 30px;
+            transition: background 0.3s ease;
+        }
+
+        .task.active {
+            background: #00e676;
+        }
+
+        .task:hover {
+            background: #333;
+        }
+
+        .typography .type-sample {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .text-display {
+            font-size: 80px;
+            color: #ff69b4;
+        }
+
+        .colour-palette .colors {
+            gap: 20px;
+        }
+
+        .color-box {
+            height: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 10px;
+            color: #fff;
+            transition: transform 0.3s ease;
+        }
+
+        .color-box:hover {
+            transform: scale(1.05);
+        }
+
+        .hot-pink { 
+            background: linear-gradient(to top,
+            #f4c0ce 10% , 
+            #f87e94 20%,
+            #fa3b67 30%, 
+            #f81445 40%);
+         }
+        .aqua-blue { background: #00d4b7; }
+        .charcoal-black { background: #151912; }
+        .cloud-white { background: #fafafa; }
+
+        .iconography {
+            text-align: center;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+
+        .iconography.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .icons {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .error{
+            margin-left: 13px;
+        }
+        .icon {
+            padding: 10px;
+            background: #f5f5f5;
+            border-radius: 50%;
+        }
+        .fa-brands{
+            font-size: 25px;
+        }
+        .grid{
+            display: flex;
+            text-align: left;
+            font-size: small;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        #grid{
+            padding: 15px;
+            border-radius: 5px; 
+        }
+        .web3{
+            background-color: #000;
+            color: white;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .text{
+            text-align: center;
+            font-size: 2rem;
+        }
+        .grid-container {
+  display: grid;
+  gap: 7px;
+  grid-template-columns: 25px 25px 25px;
+  padding: 10px;
+}
+.grid-container div {
+  padding: 10px;
+  font-size: 20px;
+  text-align: center;
+}
+        
+.paralax {
+  background-image: url("https://cdn.pixabay.com/photo/2021/03/02/13/04/laptop-6062423_1280.jpg");
+  min-height: 400px; 
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+#video-container {
+    z-index: -1;
+     top: 20px;
+     left: 20px;
+    width: 100%; 
+}
+video {
+    width: 100%;
+    border-radius: 8px;
+    position: fixed;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+#error-message {
+    position: fixed;
+    top: 50px;
+    left: 450px;
+    color: red;
+    font-size: 14px;
+}
